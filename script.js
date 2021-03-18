@@ -101,7 +101,7 @@ const point = () => {
   const c = complex(4 * (x - width() / 2) / (width() * 2 ** zooms) + center.re, -4 * (y - height() / 2) / (width() * 2 ** zooms) + center.im);
   let z = init();
   let iter = 0;
-  while (iter <= maxIter && bailout()) {
+  while (iter <= maxIter && bailout(z)) {
     z = loop(z, c);
     iter++;
   }
