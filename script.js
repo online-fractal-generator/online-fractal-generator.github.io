@@ -97,7 +97,7 @@ let pass = 0;
 
 const point = () => {
   const x = 2 ** (3 - pass) * (i % (width() / 2 ** (3 - pass)));
-  const y = Math.floor(i / width() * 4 ** (3 - pass));
+  const y = Math.floor(i / width() * 2 ** (3 - pass)) * 2 ** (3 - pass);
   const c = complex(4 * (x - width() / 2) / (width() * 2 ** zooms) + center.re, -4 * (y - height() / 2) / (width() * 2 ** zooms) + center.im);
   let z = init();
   let iter = 0;
