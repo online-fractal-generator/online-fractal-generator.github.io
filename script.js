@@ -120,9 +120,9 @@ const point = () => {
 
 const render = () => {
   if (done) {
-    zooms = param.zooms.value;
-    center = complex(param.centerRe.value, param.centerIm.value);
-    maxIter = param.maxIter.value;
+    zooms = param.zooms.value.toNumber();
+    center = complex(param.centerRe.value.toNumber(), param.centerIm.value.toNumber());
+    maxIter = param.maxIter.value.toNumber();
     done = false;
     const calc = setInterval(point, 0);
   }
