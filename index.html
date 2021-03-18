@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Online Fractal Generator</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Online Fractal Generator</h1>
+    <div id="param">
+      <p id="zooms"><label for="zooms">Zooms:</label> <input type="number" id="zooms" name="zooms" value="0" /></p>
+      <p id="centerRe"><label for="centerRe">Center (Real):</label> <input type="number" id="centerRe" name="centerRe" value="-0.5" /></p>
+      <p id="centerIm"><label for="centerIm">Center (Imag):</label> <input type="number" id="centerIm" name="centerIm" value="0" /></p>
+    </div>
+    <p><button onclick="render()" id="render">Render</button></p>
+    <div id="canvasContainer">
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+  </body>
+</html>
